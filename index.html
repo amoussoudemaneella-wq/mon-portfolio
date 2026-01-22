@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Mon Portfolio</h1>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ACCUEIL -->
+<section id="accueil">
+    <h2>Bienvenue sur mon portfolio</h2>
+    <img src="images/welcom.jpg" alt="Bienvenue" width="350">
+    <p>
+        Bienvenue sur mon portfolio personnel.
+        Je m'appelle <strong>AMOUSSOU Démane Ella</strong>, étudiante en développement web.
+    </p>
+    <p>
+        Je propose des services en création de sites web simples,
+        design graphique et conception de cartes de visite.
+        N’hésitez pas à me contacter pour toute collaboration.
+    </p>
+</section>
+
+<!-- A PROPOS -->
+<section id="apropos">
+    <h2>À propos de moi</h2>
+
+    <div class="apropos-container">
+        <img src="images/ella.jpeg" alt="Photo de AMOUSSOU Démane Ella" width="300">
+
+        <div class="apropos-text">
+            <p>
+                Je suis une personne travailleuse, sérieuse et serviable.
+                J’aime apprendre et découvrir de nouvelles connaissances.
+            </p>
+            <p>
+                Je suis motivée, patiente et organisée, et je m’investis pleinement
+                dans tout ce que je fais afin d’améliorer mes compétences
+                dans le domaine du numérique.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- COMPETENCES -->
+<section id="competences">
+    <h2>Mes compétences</h2>
+    <ul>
+        <li>HTML et CSS <img src="images/icone.jpg" alt="Icône" width="150"></li>
+        <li>Création de sites web simples</li>
+        <li>Design graphique</li>
+        <li>Conception de cartes de visite</li>
+    </ul>
+</section>
+
+<!-- PROJETS -->
+<section id="projets">
+    <h2>Mes projets</h2>
+
+    <div class="projets">Création de site web</div>
+    <div class="projets">Disign graphique</div>
+    <div class="projets">Cartes de visite</div>
+
+    <img src="images/ordi.jpeg" alt="Travail sur ordinateur" width="420">
+
+    <p>
+        J’aime travailler sur ordinateur pour créer des sites web,
+        réaliser des designs graphiques et concevoir des cartes de visite.
+        Ces projets me permettent de développer ma créativité
+        et d’améliorer mes compétences techniques.
+    </p>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies">
+    <h2>Mes hobbies</h2>
+
+    <img src="images/lecture.jpg" alt="Mes hobbies" width="200">
+
+    <p>
+        J’aime lire, car la lecture me permet de découvrir de nouvelles
+        connaissances et d’acquérir davantage de savoir.
+    </p>
+
+    <p>
+        J’aime aussi la danse. La danse est pour moi une activité sportive
+        et relaxante qui m’aide à me détendre et à rester active.
+    </p>
+
+    <p>
+        J’aime écouter la musique et naviguer sur Internet pour apprendre,
+        me divertir et m’informer.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>N’hésitez pas à me contacter pour bénéficier de mes services.</p>
+
+    <form id="contactForm">
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" placeholder="Votre nom"><br><br>
+
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" placeholder="Votre email"><br><br>
+
+        <label for="message">Message :</label><br>
+        <textarea id="message" rows="4" placeholder="Votre message"></textarea><br><br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <p id="resultat"></p>
+</section>
+
+<footer>
+    <p>© 2026 - Mon portfolio</p>
+</footer>
+
+<!--JavaScript pour effet survol-->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // empêche le rechargement de la page
+
+    var nom = document.getElementById("nom").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var message = document.getElementById("message").value.trim();
+    var resultat = document.getElementById("resultat");
+
+    if (nom === "" || email === "" || message === "") {
+        resultat.textContent = "Veuillez remplir tous les champs.";
+        resultat.style.color = "red";
+    } else {
+        resultat.textContent = "Merci pour votre message, nous vous contacterons bientôt !";
+        resultat.style.color = "green";
+
+        // vider les champs
+        document.getElementById("nom").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    }
+});
+</script>
+</body>
+</html>
