@@ -35,7 +35,7 @@ nav ul li a {
 main {
     padding: 20px;
     background-color: white;
-    margin: 20px;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
@@ -50,4 +50,10 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    margin: auto;
 }
